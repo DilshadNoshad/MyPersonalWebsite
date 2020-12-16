@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<script>
+
+    function euroConverter() {
+        document.converter.dollar.value = document.converter.euro.value * 1.470
+        document.converter.pound.value = document.converter.euro.value * 0.717
+        document.converter.yen.value = document.converter.euro.value * 165.192
+    }
+    function dollarConverter() {
+        document.converter.euro.value = document.converter.dollar.value * 0.680
+        document.converter.pound.value = document.converter.dollar.value * 0.488
+        document.converter.yen.value = document.converter.dollar.value * 112.36
+    }
+    function poundConverter() {
+        document.converter.dollar.value = document.converter.pound.value * 2.049
+        document.converter.euro.value = document.converter.pound.value * 1.394
+        document.converter.yen.value = document.converter.pound.value * 230.27
+    }
+    function yenConverter() {
+        document.converter.dollar.value = document.converter.yen.value * 0.0089
+        document.converter.pound.value = document.converter.yen.value * 0.00434
+        document.converter.euro.value = document.converter.yen.value * 0.00605
+    }
+
+</script>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div id="logo">
+                <img src="./img/logo2.png" alt="MyOnlineMeals.com">
+            </div>
+            <h2>D Nav</h2>
+            <ul>
+                <li><a href="Home.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="personal.html"><i class="fas fa-user"></i>Profile</a></li>
+                <li><a href="contact2.html"><i class="fas fa-address-book"></i>Contact</a></li>
+                <li><a href="JSProject1.html"><i class="fas fa-clock"></i>Current Time</a></li>
+            </ul>
+            <div class="social_media">
+                <a href="https://www.facebook.com/dilshad.noshad.7"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a
+                    href="https://www.instagram.com/dilshad_noshad009/?fbclid=IwAR1NKBUSij0KnwAKolJgTr9RKCauR3YmI-0OejhxDH9n3OOHC2Odkg7_ncQ"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="header">Welcome!! Have a nice day.</div>
+            <h3>Currency Coversion</h3>
+        </div>
+    </div>
+
+    <div class="box">
+        <form name="converter">
+            <table border="0">
+                <tr>
+                    <td class="textbox">Euro: </td>
+                    <td><input type="text" name="euro" onChange="euroConverter()" /></td>
+                </tr>
+                <tr>
+                    <td class="textbox">US Dollar: </td>
+                    <td><input type="text" name="dollar" onChange="dollarConverter()" /></td>
+                </tr>
+                <tr>
+                    <td class="textbox">British Pound:</td>
+                    <td><input type="text" name="pound" onChange="poundConverter()" /></td>
+                </tr>
+                <tr>
+                    <td class="textbox">Japanese Yen: </td>
+                    <td><input type="text" name="yen" onChange="yenConverter()" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="btn" align="center"><input type="button" value="Convert!" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
